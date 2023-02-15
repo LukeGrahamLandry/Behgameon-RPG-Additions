@@ -27,7 +27,6 @@ public class Config {
 		public final BooleanValue USE_CHESTLOOTSYSTEM;
 		public ConfigValue<Integer> ACCESSORY_MAXDAMAGE;
 		public ConfigValue<Integer> RING_MAXDAMAGE;
-		public ConfigValue<Integer> SHIELD_MAXDAMAGE;
 
 		ServerConfig(ForgeConfigSpec.Builder builder) {
 			builder.push("general");
@@ -41,8 +40,6 @@ public class Config {
 					.define("ACCESSORY_MAXDAMAGE", 1000);
 			RING_MAXDAMAGE = builder.comment("Ring Max Damage")
 					.translation(BehgameonMod.MODID + ".config.ring_maxdamage").define("RING_MAXDAMAGE", 1000);
-			SHIELD_MAXDAMAGE = builder.comment("Shield Damage")
-					.translation(BehgameonMod.MODID + ".config.shild_maxdamage").define("SHIELD_MAXDAMAGE", 1000);
 			builder.pop();
 		}
 	}
